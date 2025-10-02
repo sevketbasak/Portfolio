@@ -4,13 +4,13 @@ function Header() {
       <nav className="navbar">
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a href="#home">Accueil</a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#about">À propos</a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#projects">Projets</a>
           </li>
           <li>
             <a href="#contact">Contact</a>
