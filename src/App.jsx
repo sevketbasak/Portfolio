@@ -32,12 +32,15 @@ function App() {
           }
 
           .header h1 {
-          font-size: 3rem;
+          font-size: 4rem;
+          text-align:center;
           }
 
           .header h2 {
-          font-size: 2rem;
-          margin-top: -30px;}
+          font-size: 2.5rem;
+          margin-top: -40px;
+          text-align:center;
+}
       `}</style>
     </>
   );

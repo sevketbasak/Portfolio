@@ -39,11 +39,23 @@ function Header() {
           text-decoration: none;
           color: white;
           font-weight: 500;
-          transition: color 0.2s;
+          position: relative;
         }
 
-        .navbar a:hover {
-          text-decoration: underline;
+        .navbar a::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 2px;
+          background-color: #a8dadc; /* ou une couleur qui contraste */
+          transition: width 0.3s ease;
+        }
+
+        .navbar a:hover::after {
+          width: 100%;
         }
       `}</style>
     </>
