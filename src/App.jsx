@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
+import { ReactTyped } from "react-typed";
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -10,8 +11,19 @@ function App() {
         <div id="main-content">
           <Header />
           <div className="header">
-            <h1>Sevket BASAK</h1>
-            <h2>Développeur</h2>
+            <ReactTyped
+              strings={["Sevket BASAK"]}
+              typeSpeed={50}
+              showCursor={false}
+            />
+            <br />
+            <ReactTyped
+              strings={["Développeur"]}
+              typeSpeed={50}
+              startDelay={1500}
+              showCursor={false}
+              style={{ fontSize: "40px" }}
+            />
           </div>
         </div>
       </>
@@ -26,20 +38,17 @@ function App() {
             animation: fadeIn 1s ease-in-out;
           }
           .header {
-          line-height: 1.1;
+          line-height: 1;
           margin-left: 30px;
-          color: #1d3557;
-          }
-
-          .header h1 {
-          font-size: 4rem;
-          text-align:center;
+          color: white;
+          text-align: center;
+          margin-top: 50px;
+          font-size: 3rem;
           }
 
           .header h2 {
           font-size: 2.5rem;
           margin-top: -40px;
-          text-align:center;
 }
       `}</style>
     </>

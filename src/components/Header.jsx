@@ -23,8 +23,8 @@ function Header() {
           display: flex;
           justify-content: center;
           padding: 1.5rem 0;
-          background-color: #1d3557;
-          border-bottom: 1px solid #1d3557;
+          background-color: #161b22;
+          border-bottom: 1px solid #161b22;
         }
 
         .navbar ul {
