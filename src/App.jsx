@@ -20,12 +20,7 @@ function App() {
             />
             <br />
             <ReactTyped
-              strings={[
-                "Developer",
-                "Web Developer",
-                "Game Developer",
-                "Pixel Artist",
-              ]}
+              strings={["Developer", "Web Developer", "Game Developer"]}
               typeSpeed={50}
               backSpeed={50}
               startDelay={1000}
@@ -56,11 +51,7 @@ function App() {
             >
               À propos
             </h3>
-            <p style={{ lineHeight: "1.6", fontSize: "1.5rem", margin: 0 }}>
-              Passionné par le développement web, je crée des applications
-              modernes et performantes. Spécialisé en React et JavaScript,
-              j'aime transformer des idées en expériences digitales.
-            </p>
+            <p style={{ lineHeight: "1.6", fontSize: "1.5rem", margin: 0 }}></p>
           </Card>
         </div>
       </>
