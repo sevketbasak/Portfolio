@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import { ReactTyped } from "react-typed";
 import { Card } from "@mui/material";
+import TechList from "./components/Techlist";
 
 function App() {
   const [showIntro, setShowIntro] = useState(true);
@@ -30,7 +31,7 @@ function App() {
               backSpeed={50}
               startDelay={1000}
               showCursor={true}
-              loop={true} // Important pour que ça boucle !
+              loop={true}
               style={{ fontSize: "40px" }}
             />
           </div>
@@ -56,7 +57,10 @@ function App() {
             >
               À propos
             </h3>
-            <p style={{ lineHeight: "1.6", fontSize: "1.5rem", margin: 0 }}></p>
+            <p style={{ lineHeight: "1.6", fontSize: "1.5rem", margin: 0 }}>
+              Actuellement en Pré-MSc chez EPITECH Strasbourg, je suis depuis
+              longtemps passionné par le développement informatique.
+            </p>
           </Card>
         </div>
       </>
