@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 import { ReactTyped } from "react-typed";
 import { Card } from "@mui/material";
 import TechList from "./components/Techlist";
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Navbar />
       <>
         <div id="main-content">
           <div className="header">
