@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Header() {
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -157,4 +157,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Navbar;
