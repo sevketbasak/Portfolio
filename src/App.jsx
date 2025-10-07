@@ -20,7 +20,12 @@ function App() {
             />
             <br />
             <ReactTyped
-              strings={["Developer", "Web Developer", "Game Developer"]}
+              strings={[
+                "Developer",
+                "Web Developer",
+                "Game Developer",
+                "Pixel artist",
+              ]}
               typeSpeed={50}
               backSpeed={50}
               startDelay={1000}
