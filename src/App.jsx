@@ -77,9 +77,6 @@ function App() {
       <section id="projects" className="section">
         <div className="section-content">
           <h2 className="section-title">Projets</h2>
-          <p style={{ color: "white", textAlign: "center" }}>
-            Mes projets arrivent bientôt...
-          </p>
         </div>
       </section>
 
