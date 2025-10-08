@@ -75,6 +75,50 @@ function App() {
       <section id="projects" className="section">
         <div className="section-content">
           <h2 className="section-title">Projets</h2>
+
+          <div className="projects-grid">
+            <Card className="project-card">
+              <h3 className="project-title">Job-board web-app</h3>
+              <p className="project-description">
+                Application web effectuée en React.js & PHP Laravel
+              </p>
+              <p className="project-description">
+                L'application permet aux utilisateurs de postuler à plusieurs
+                offres d'emploi en renseignant CV, Lettre de Motivation et +
+              </p>
+              <p className="project-description">
+                Possibilité de filtrer les offres par mots-clés et type de
+                contrat
+              </p>
+            </Card>
+
+            <Card className="project-card">
+              <h3 className="project-title">"MemoriaCam"</h3>
+              <p className="project-description">
+                Application mobile d'enregistrement vidéo en mode kiosque
+              </p>
+              <p className="project-description">
+                L'utilisateur peut enregistrer de courte vidéos
+              </p>
+
+              <p className="project-description">
+                L'admin, grâce à un mot de passe, peut quitter le mode kiosque
+                pour accéder à la galerie, et ainsi supprimer des vidéos
+                indésirables
+              </p>
+            </Card>
+
+            <Card className="project-card">
+              <h3 className="project-title">"LangIA"</h3>
+              <p className="project-description">
+                Projet simple de prédiction de la langue d'un texte entre
+                français, anglais, et 5 autres langues
+              </p>
+              <p className="project-description">
+                Dataset contenant des centaines de phrases pour chaque langue
+              </p>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -118,15 +162,16 @@ function App() {
         }
         
         .section {
+          margin-top: 200px;
           min-height: 100vh;
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 50px 20px;
+          padding: 50px;
         }
         
         .section-content {
-          max-width: 1200px;
+          max-width: 1400px;
           width: 100%;
         }
         
@@ -139,6 +184,46 @@ function App() {
         
         html {
           scroll-behavior: smooth;
+        }
+        
+        .projects-grid {
+          display: flex;
+          justify-content: center;
+          gap: 1.5rem;
+          flex-wrap: wrap;
+        }
+        
+        .project-card {
+          max-width: 350px;
+          padding: 30px;
+          background-color: #1c2128;
+          color: white;
+          border-radius: 12px;
+          border: 1px solid transparent;
+          background-image: linear-gradient(#1c2128, #1c2128), linear-gradient(135deg, #667eea, #764ba2);
+          background-origin: border-box;
+          background-clip: padding-box, border-box;
+          box-shadow: 0 0 30px rgba(102, 126, 234, 0.2);
+          transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 0 40px rgba(102, 126, 234, 0.2);
+        }
+        
+        .project-title {
+          margin: 0 0 15px 0;
+          font-size: 1.8rem;
+          text-align: center;
+        }
+        
+        .project-description {
+          margin-bot: 10px;
+          font-size: 1.1rem;
+          line-height: 1.6;
+          text-align: center;
+          color: #8892b0;
         }
       `}</style>
     </>
