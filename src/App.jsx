@@ -11,7 +11,6 @@ function App() {
     <>
       <Navbar />
 
-      {/* Section Accueil */}
       <section id="home">
         <div id="main-content">
           <div className="header">
@@ -73,14 +72,12 @@ function App() {
         </div>
       </section>
 
-      {/* Section Projets */}
       <section id="projects" className="section">
         <div className="section-content">
           <h2 className="section-title">Projets</h2>
         </div>
       </section>
 
-      {/* Section Contact */}
       <section id="contact">
         <Footer />
       </section>
