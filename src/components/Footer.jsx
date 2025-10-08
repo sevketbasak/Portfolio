@@ -13,7 +13,7 @@ function Footer() {
 
           <div className="contact-links">
             <a
-              href="sevket.basak@epitech.eu"
+              href="mailto:sevket.basak@epitech.eu"
               className="contact-link"
               target="_blank"
               rel="noopener noreferrer"
