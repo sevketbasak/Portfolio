@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,14 +27,14 @@ function Navbar() {
         </button>
         <ul>
           <li>
-            <a href="#home" onClick={toggleSidebar}>
+            <Link to="/" onClick={toggleSidebar}>
               Accueil
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#projects" onClick={toggleSidebar}>
+            <Link to="/projects" onClick={toggleSidebar}>
               Projets
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#contact" onClick={toggleSidebar}>
@@ -44,6 +45,7 @@ function Navbar() {
       </nav>
 
       <style>{`
+
         .hamburger {
           position: fixed;
           top: 20px;

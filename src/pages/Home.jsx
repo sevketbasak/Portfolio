@@ -1,6 +1,5 @@
 import { ReactTyped } from "react-typed";
 import { Card } from "@mui/material";
-
 function Home() {
   return (
     <>
@@ -114,106 +113,110 @@ function Home() {
           </div>
         </div>
       </section>
-      <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        
-        @keyframes slideInLeft {
-          from {
-            opacity: 0;
-            transform: translateX(-30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        
-        #main-content {
-          animation: fadeIn 1s ease-in-out;
-        }
-        
-        .header {
-          line-height: 1;
-          color: white;
-          text-align: center;
-          margin-top: 50px;
-          font-size: 3rem;
-        }
-        
-        .card-container {
-          display: flex;
-          justify-content: center;
-          margin-top: 50px;
-        }
-        
-        .section {
-          margin-top: 200px;
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 50px;
-        }
-        
-        .section-content {
-          max-width: 1400px;
-          width: 100%;
-        }
-        
-        .section-title {
-          color: white;
-          font-size: 3rem;
-          text-align: center;
-          margin-bottom: 50px;
-        }
-        
-        html {
-          scroll-behavior: smooth;
-        }
-        
-        .projects-grid {
-          display: flex;
-          justify-content: center;
-          gap: 1.5rem;
-          flex-wrap: wrap;
-        }
-        
-        .project-card {
-          max-width: 350px;
-          padding: 30px;
-          background-color: #1c2128;
-          color: white;
-          border-radius: 12px;
-          border: 1px solid transparent;
-          background-image: linear-gradient(#1c2128, #1c2128), linear-gradient(135deg, #667eea, #764ba2);
-          background-origin: border-box;
-          background-clip: padding-box, border-box;
-          box-shadow: 0 0 30px rgba(102, 126, 234, 0.2);
-          transition: all 0.3s ease;
-        }
-        
-        .project-card:hover {
-          transform: translateY(-10px);
-          box-shadow: 0 0 40px rgba(102, 126, 234, 0.2);
-        }
-        
-        .project-title {
-          margin: 0 0 15px 0;
-          font-size: 1.8rem;
-          text-align: center;
-        }
-        
-        .project-description {
-          margin-bot: 10px;
-          font-size: 1.1rem;
-          line-height: 1.6;
-          text-align: center;
-          color: #8892b0;
-        }
-      `}</style>
+      <style>{`@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#main-content {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.header {
+  line-height: 1;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 3rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.section {
+  margin-top: 200px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.section-content {
+  max-width: 1400px;
+  width: 100%;
+}
+
+.section-title {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  max-width: 350px;
+  padding: 30px;
+  background-color: #1c2128;
+  color: white;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#1c2128, #1c2128),
+    linear-gradient(135deg, #667eea, #764ba2);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 0 30px rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(102, 126, 234, 0.2);
+}
+
+.project-title {
+  margin: 0 0 15px 0;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.project-description {
+  margin-bot: 10px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #8892b0;
+}
+`}</style>
     </>
   );
 }
