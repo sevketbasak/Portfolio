@@ -92,7 +92,7 @@ function Navbar() {
           position: fixed;
           top: 0;
           left: -300px;
-          width: 200px;
+          width: 250px;
           height: 100vh;
           background-color: #161b22;
           padding: 80px 20px 20px 20px;
