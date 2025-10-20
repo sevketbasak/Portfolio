@@ -36,11 +36,6 @@ function Navbar() {
               Projets
             </Link>
           </li>
-          <li>
-            <a href="#contact" onClick={toggleSidebar}>
-              Contact
-            </a>
-          </li>
         </ul>
       </nav>
 
