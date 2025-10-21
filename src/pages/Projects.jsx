@@ -1,4 +1,5 @@
 import React from "react";
+import jobboardImg from "../assets/jobboard.png";
 
 function Projects() {
   return (
@@ -8,29 +9,38 @@ function Projects() {
       <hr style={styles.divider} />
 
       <div style={styles.projectSection}>
-        <div style={styles.project}>
-          <h2 style={styles.projectTitle}>Job-board web-app</h2>
-          <p style={styles.projectDescription}>
-            Application web de création et de consultation d'offres d'emploi
-            développé avec React.js et PHP Laravel
-          </p>
-          <div style={styles.detailsSection}>
-            <h3 style={styles.detailsTitle}>Caractéristiques :</h3>
-            <ul style={styles.detailsList}>
-              <li>Interface utilisateur intuitive et front responsive</li>
-              <li>Système d'authentification complet et sécurisé</li>
-              <li>
-                Candidature simple et rapide avec upload de CV et lettre de
-                motivation
-              </li>
-              <li>
-                Filtrage avancé des offres par mots-clés et type de contrat
-              </li>
-              <li>
-                Gestion du CRUD complet accessible pour administrateurs et
-                routes sécurisées selon le rôle
-              </li>
-            </ul>
+        <div style={styles.projectWithImage}>
+          <div style={styles.projectContent}>
+            <h2 style={styles.projectTitle}>Job-board web-app</h2>
+            <p style={styles.projectDescription}>
+              Application web de création et de consultation d'offres d'emploi
+              développé avec React.js et PHP Laravel
+            </p>
+            <div style={styles.detailsSection}>
+              <h3 style={styles.detailsTitle}>Caractéristiques :</h3>
+              <ul style={styles.detailsList}>
+                <li>Interface utilisateur intuitive et front responsive</li>
+                <li>Système d'authentification complet et sécurisé</li>
+                <li>
+                  Candidature simple et rapide avec upload de CV et lettre de
+                  motivation
+                </li>
+                <li>
+                  Filtrage avancé des offres par mots-clés et type de contrat
+                </li>
+                <li>
+                  Gestion du CRUD complet accessible pour administrateurs et
+                  routes sécurisées selon le rôle
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div style={styles.imageContainer}>
+            <img
+              src={jobboardImg}
+              alt="Demo Job-board"
+              style={styles.projectImage}
+            />
           </div>
         </div>
 
@@ -100,8 +110,27 @@ const styles = {
   },
   projectSection: {
     marginBottom: "100px",
-    maxWidth: "1000px",
-    marginLeft: "80px",
+    maxWidth: "1400px",
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
+  projectWithImage: {
+    display: "flex",
+    gap: "60px",
+    alignItems: "center",
+  },
+  projectContent: {
+    flex: 1,
+  },
+  imageContainer: {
+    flex: "0 0 600px",
+  },
+  projectImage: {
+    width: "100%",
+    height: "auto",
+    borderRadius: "12px",
+    border: "1px solid #30363d",
+    boxShadow: "0 0 20px rgba(102, 126, 234, 0.2)",
   },
   project: {
     color: "white",
