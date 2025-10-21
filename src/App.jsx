@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Sandbox from "./pages/Sandbox";
 import NasaSection from "./pages/NasaSection";
+import WeatherSection from "./pages/WeatherSection";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/sandbox" element={<Sandbox />} />
             <Route path="/sandbox/nasa" element={<NasaSection />} />
+            <Route path="/sandbox/weather" element={<WeatherSection />} />
+
             <Route path="/" element={<Home />} />
           </Routes>
         </div>
