@@ -1,3 +1,5 @@
+import { Link, useNavigate } from "react-router-dom";
+
 import nasasvg from "../assets/nasa.svg";
 import weathersvg from "../assets/weather.svg";
 import snakesvg from "../assets/snake.svg";
@@ -5,27 +7,35 @@ import memorysvg from "../assets/memory.svg";
 import pongsvg from "../assets/pong.svg";
 
 function Sandbox() {
+  const navigate = useNavigate();
+
   const apis = [
-    { id: 1, title: "NASA", description: "API NASA", icon: nasasvg },
+    {
+      id: 1,
+      title: "NASA",
+      description: "API NASA",
+      icon: nasasvg,
+      path: "/sandbox/nasa",
+    },
     { id: 2, title: "Weather", description: "API météo", icon: weathersvg },
   ];
   const games = [
     {
       id: 1,
       title: "Snake",
-      description: "Le célèbre jeu du serpent",
+      description: "Jeu du serpent",
       icon: snakesvg,
     },
     {
       id: 2,
       title: "Memory",
-      description: "Jeu de mémoire avec des cartes",
+      description: "Jeu de mémoire",
       icon: memorysvg,
     },
     {
       id: 3,
       title: "Pong",
-      description: "Le jeu de ping-pong classique",
+      description: "Jeu pong classique",
       icon: pongsvg,
     },
   ];
@@ -35,9 +45,11 @@ function Sandbox() {
     // ...
   };
 
-  const handleApiClick = (apiTitle) => {
-    console.log(`Clicked on ${apiTitle}`);
-    // ...
+  const handleApiClick = (api) => {
+    console.log(`Clicked on ${api.title}`);
+    if (api.path) {
+      navigate(api.path);
+    }
   };
 
   return (
@@ -49,7 +61,7 @@ function Sandbox() {
           <button
             key={api.id}
             style={styles.gameCard}
-            onClick={() => handleApiClick(api.title)}
+            onClick={() => handleApiClick(api)}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-10px)";
               e.currentTarget.style.backgroundImage =
@@ -73,7 +85,7 @@ function Sandbox() {
           </button>
         ))}
       </div>
-      <h1 style={styles.header}>Sandbox</h1>
+      <h1 style={styles.header}>Jeux</h1>
       <p style={styles.subtitle}>
         Collection de mini-jeux et projets interactifs
       </p>
