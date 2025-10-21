@@ -36,6 +36,11 @@ function Navbar() {
               Projets
             </Link>
           </li>
+          <li>
+            <Link to="/sandbox" onClick={toggleSidebar}>
+              Sandbox
+            </Link>
+          </li>
         </ul>
       </nav>
 

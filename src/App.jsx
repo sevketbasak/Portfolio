@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
+import Sandbox from "./pages/Sandbox";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <div style={{ flex: 1 }}>
           <Routes>
             <Route path="/projects" element={<Projects />} />
+            <Route path="/sandbox" element={<Sandbox />} />
             <Route path="/" element={<Home />} />
           </Routes>
         </div>
