@@ -17,7 +17,13 @@ function Sandbox() {
       icon: nasasvg,
       path: "/sandbox/nasa",
     },
-    { id: 2, title: "Weather", description: "API météo", icon: weathersvg },
+    {
+      id: 2,
+      title: "Weather",
+      description: "API météo",
+      icon: weathersvg,
+      path: "/sandbox/weather",
+    },
   ];
   const games = [
     {

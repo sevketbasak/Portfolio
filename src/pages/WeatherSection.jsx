@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 
 function WeatherSection() {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const API_KEY = "5b05a7957bacee612f1e8620df542905";
+  const CACHE_KEY = "weather_data_cache";
+  const CACHE_DURATION = 1 * 60 * 60 * 1000;
   return;
 }
 

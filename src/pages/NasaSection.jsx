@@ -51,7 +51,7 @@ function NasaSection() {
 
   return (
     <section style={styles.section}>
-      <h2 style={styles.title}>Image du jour - NASA</h2>
+      <h2 style={styles.title}>Astronomy Picture of the Day</h2>
       <img src={data.url} alt={data.title} style={styles.image} />
       <h3 style={styles.subtitle}>{data.title}</h3>
       <p style={styles.explanation}>{data.explanation}</p>
