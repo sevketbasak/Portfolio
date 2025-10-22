@@ -174,7 +174,6 @@ const styles = {
     backgroundClip: "padding-box, border-box",
     color: "white",
     cursor: "pointer",
-    transition: "all 0.3s ease",
     fontWeight: "600",
   },
   cityName: {
