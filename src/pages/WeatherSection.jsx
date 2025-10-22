@@ -195,6 +195,7 @@ const styles = {
     boxShadow: "0 0 30px rgba(102, 126, 234, 0.3)",
     maxWidth: "500px",
     width: "100%",
+    marginBottom: "25px",
   },
   weatherHeader: {
     display: "flex",
