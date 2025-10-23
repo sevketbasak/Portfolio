@@ -32,85 +32,87 @@ function Home() {
           </div>
 
           <div className="card-container">
-            <Card
-              className="pixel-card"
-              style={{
-                maxWidth: "700px",
-                padding: "50px",
-                backgroundColor: "#1c2128",
-                color: "white",
-                border: "none",
-                position: "relative",
-                animation: "slideInLeft 0.8s ease-out 2s both",
-              }}
-            >
-              <div
+            <div className="pixel-card-wrapper">
+              <Card
+                className="pixel-card"
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "30px",
-                  marginBottom: "30px",
+                  maxWidth: "700px",
+                  padding: "50px",
+                  backgroundColor: "#1c2128",
+                  color: "white",
+                  border: "none",
+                  position: "relative",
+                  animation: "slideInLeft 0.8s ease-out 2s both",
                 }}
               >
-                <img
-                  src={epitechLogo}
-                  alt="EPITECH Logo"
+                <div
                   style={{
-                    width: "120px",
-                    height: "120px",
-                    objectFit: "contain",
-                    filter: "brightness(0) invert(1)",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "30px",
+                    marginBottom: "30px",
                   }}
-                />
-                <div>
-                  <h3
+                >
+                  <img
+                    src={epitechLogo}
+                    alt="EPITECH Logo"
                     style={{
-                      marginTop: 0,
-                      fontSize: "2rem",
-                      marginBottom: "10px",
+                      width: "120px",
+                      height: "120px",
+                      objectFit: "contain",
+                      filter: "brightness(0) invert(1)",
                     }}
-                  >
-                    À propos
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "1.1rem",
-                      color: "#667eea",
-                      margin: 0,
-                      fontWeight: "600",
-                    }}
-                  >
-                    Étudiant à EPITECH Strasbourg
-                  </p>
+                  />
+                  <div>
+                    <h3
+                      style={{
+                        marginTop: 0,
+                        fontSize: "2rem",
+                        marginBottom: "10px",
+                      }}
+                    >
+                      À propos
+                    </h3>
+                    <p
+                      style={{
+                        fontSize: "1.1rem",
+                        color: "#667eea",
+                        margin: 0,
+                        fontWeight: "600",
+                      }}
+                    >
+                      Étudiant à EPITECH Strasbourg
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <p
-                style={{
-                  lineHeight: "1.8",
-                  fontSize: "1.3rem",
-                  margin: 0,
-                  color: "#8892b0",
-                }}
-              >
-                Actuellement en Pré-MSc chez EPITECH Strasbourg, je suis depuis
-                longtemps passionné par le développement informatique.
-              </p>
-              <div
-                style={{
-                  marginTop: "30px",
-                  display: "flex",
-                  gap: "15px",
-                  flexWrap: "wrap",
-                  justifyContent: "center",
-                }}
-              >
-                <span style={styles.tag}>React.js</span>
-                <span style={styles.tag}>PHP Laravel</span>
-                <span style={styles.tag}>React Native</span>
-                <span style={styles.tag}>Python</span>
-                <span style={styles.tag}>JavaScript</span>
-              </div>
-            </Card>
+                <p
+                  style={{
+                    lineHeight: "1.8",
+                    fontSize: "1.3rem",
+                    margin: 0,
+                    color: "#8892b0",
+                  }}
+                >
+                  Actuellement en Pré-MSc chez EPITECH Strasbourg, je suis
+                  depuis longtemps passionné par le développement informatique.
+                </p>
+                <div
+                  style={{
+                    marginTop: "30px",
+                    display: "flex",
+                    gap: "15px",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
+                >
+                  <span className="pixel-tag">React.js</span>
+                  <span className="pixel-tag">PHP Laravel</span>
+                  <span className="pixel-tag">Java</span>
+                  <span className="pixel-tag">C#</span>
+                  <span className="pixel-tag">Python</span>
+                </div>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -120,92 +122,172 @@ function Home() {
           <h2 className="section-title">Projets</h2>
 
           <div className="projects-grid">
-            <Card className="project-card">
-              <h3 className="project-title">Job-board web-app</h3>
-              <p className="project-description">
-                Application web effectuée en React.js & PHP Laravel
-              </p>
-              <p className="project-description">
-                L'application permet aux utilisateurs de postuler à plusieurs
-                offres d'emploi en renseignant CV, Lettre de Motivation et +
-              </p>
-              <p className="project-description">
-                Possibilité de filtrer les offres par mots-clés et type de
-                contrat
-              </p>
-            </Card>
+            <div className="pixel-wrapper">
+              <Card className="project-card pixel-effect">
+                <h3 className="project-title">Job-board web-app</h3>
+                <p className="project-description">
+                  Application web effectuée en React.js & PHP Laravel
+                </p>
+                <p className="project-description">
+                  L'application permet aux utilisateurs de postuler à plusieurs
+                  offres d'emploi en renseignant CV, Lettre de Motivation et +
+                </p>
+                <p className="project-description">
+                  Possibilité de filtrer les offres par mots-clés et type de
+                  contrat
+                </p>
+              </Card>
+            </div>
 
-            <Card className="project-card">
-              <h3 className="project-title">"MemoriaCam"</h3>
-              <p className="project-description">
-                Application mobile d'enregistrement vidéo en mode kiosque
-              </p>
-              <p className="project-description">
-                L'utilisateur peut enregistrer de courte vidéos
-              </p>
+            <div className="pixel-wrapper">
+              <Card className="project-card pixel-effect">
+                <h3 className="project-title">"MemoriaCam"</h3>
+                <p className="project-description">
+                  Application mobile d'enregistrement vidéo en mode kiosque
+                </p>
+                <p className="project-description">
+                  L'utilisateur peut enregistrer de courte vidéos
+                </p>
 
-              <p className="project-description">
-                L'admin, grâce à un mot de passe, peut quitter le mode kiosque
-                pour accéder à la galerie, et ainsi supprimer des vidéos
-                indésirables
-              </p>
-            </Card>
+                <p className="project-description">
+                  L'admin, grâce à un mot de passe, peut quitter le mode kiosque
+                  pour accéder à la galerie, et ainsi supprimer des vidéos
+                  indésirables
+                </p>
+              </Card>
+            </div>
 
-            <Card className="project-card">
-              <h3 className="project-title">"LangIA"</h3>
-              <p className="project-description">
-                Projet simple de prédiction de la langue d'un texte entre
-                français, anglais, et 5 autres langues
-              </p>
-              <p className="project-description">
-                Dataset contenant des centaines de phrases pour chaque langue
-              </p>
-            </Card>
+            <div className="pixel-wrapper">
+              <Card className="project-card pixel-effect">
+                <h3 className="project-title">"LangIA"</h3>
+                <p className="project-description">
+                  Projet simple de prédiction de la langue d'un texte entre
+                  français, anglais, et 5 autres langues
+                </p>
+                <p className="project-description">
+                  Dataset contenant des centaines de phrases pour chaque langue
+                </p>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
-      <style>{`@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+      <style>{`
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
-.pixel-card {
-  image-rendering: pixelated;
-  border-radius: 0 !important;
+.pixel-clip {
   clip-path: polygon(
     0 8px, 8px 8px, 8px 0,
     calc(100% - 8px) 0, calc(100% - 8px) 8px, 100% 8px,
     100% calc(100% - 8px), calc(100% - 8px) calc(100% - 8px), calc(100% - 8px) 100%,
     8px 100%, 8px calc(100% - 8px), 0 calc(100% - 8px)
   );
-  box-shadow: 
-    0 0 0 3px #667eea,
-    6px 0 0 3px #667eea,
-    -6px 0 0 3px #667eea,
-    0 6px 0 3px #667eea,
-    0 -6px 0 3px #667eea,
-    6px 6px 0 3px #764ba2,
-    -6px -6px 0 3px #764ba2,
-    6px -6px 0 3px #764ba2,
-    -6px 6px 0 3px #764ba2,
-    12px 12px 0 0 rgba(102, 126, 234, 0.3),
-    16px 16px 0 0 rgba(102, 126, 234, 0.2),
-    20px 20px 0 0 rgba(102, 126, 234, 0.1);
+}
+
+.pixel-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 350px;
+}
+
+.pixel-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: -6px;
+  bottom: -6px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  opacity: 0.4;
+  z-index: -1;
+  clip-path: polygon(
+    0 8px, 8px 8px, 8px 0,
+    calc(100% - 8px) 0, calc(100% - 8px) 8px, 100% 8px,
+    100% calc(100% - 8px), calc(100% - 8px) calc(100% - 8px), calc(100% - 8px) 100%,
+    8px 100%, 8px calc(100% - 8px), 0 calc(100% - 8px)
+  );
+}
+
+.pixel-effect {
+  image-rendering: pixelated;
+  border-radius: 0 !important;
+  border: none !important;
+  clip-path: polygon(
+    0 8px, 8px 8px, 8px 0,
+    calc(100% - 8px) 0, calc(100% - 8px) 8px, 100% 8px,
+    100% calc(100% - 8px), calc(100% - 8px) calc(100% - 8px), calc(100% - 8px) 100%,
+    8px 100%, 8px calc(100% - 8px), 0 calc(100% - 8px)
+  );
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.pixel-card-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.pixel-card-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: -8px;
+  bottom: -8px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  opacity: 0.4;
+  z-index: -1;
+  clip-path: polygon(
+    0 8px, 8px 8px, 8px 0,
+    calc(100% - 8px) 0, calc(100% - 8px) 8px, 100% 8px,
+    100% calc(100% - 8px), calc(100% - 8px) calc(100% - 8px), calc(100% - 8px) 100%,
+    8px 100%, 8px calc(100% - 8px), 0 calc(100% - 8px)
+  );
+}
+
+.pixel-card {
+  image-rendering: pixelated;
+  border-radius: 0 !important;
+  border: 4px solid;
+  border-image: linear-gradient(135deg, #667eea, #764ba2) 1;
+  clip-path: polygon(
+    0 8px, 8px 8px, 8px 0,
+    calc(100% - 8px) 0, calc(100% - 8px) 8px, 100% 8px,
+    100% calc(100% - 8px), calc(100% - 8px) calc(100% - 8px), calc(100% - 8px) 100%,
+    8px 100%, 8px calc(100% - 8px), 0 calc(100% - 8px)
+  );
+  position: relative;
+  z-index: 1;
+}
+
+.pixel-tag {
+  padding: 8px 16px;
+  background-color: rgba(102, 126, 234, 0.2);
+  color: #667eea;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 2px solid #667eea;
+  image-rendering: pixelated;
+  border-radius: 0;
+  clip-path: polygon(
+    0 4px, 4px 4px, 4px 0,
+    calc(100% - 4px) 0, calc(100% - 4px) 4px, 100% 4px,
+    100% calc(100% - 4px), calc(100% - 4px) calc(100% - 4px), calc(100% - 4px) 100%,
+    4px 100%, 4px calc(100% - 4px), 0 calc(100% - 4px)
+  );
+  display: inline-block;
+  position: relative;
+  box-shadow: 3px 3px 0 rgba(102, 126, 234, 0.3);
 }
 
 #main-content {
@@ -254,30 +336,25 @@ html {
 }
 
 .projects-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 350px));
   justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .project-card {
-  max-width: 350px;
+  width: 100%;
+  height: 100%;
   padding: 30px;
   background-color: #1c2128;
   color: white;
-  border-radius: 12px;
-  border: 1px solid transparent;
-  background-image: linear-gradient(#1c2128, #1c2128),
-    linear-gradient(135deg, #667eea, #764ba2);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  box-shadow: 0 0 30px rgba(102, 126, 234, 0.2);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 40px rgba(102, 126, 234, 0.2);
+  transform: translateY(-5px);
 }
 
 .project-title {
@@ -287,7 +364,7 @@ html {
 }
 
 .project-description {
-  margin-bot: 10px;
+  margin-bottom: 10px;
   font-size: 1.1rem;
   line-height: 1.6;
   text-align: center;
@@ -297,17 +374,5 @@ html {
     </>
   );
 }
-
-const styles = {
-  tag: {
-    padding: "8px 20px",
-    backgroundColor: "rgba(102, 126, 234, 0.2)",
-    color: "#667eea",
-    borderRadius: "20px",
-    fontSize: "0.95rem",
-    fontWeight: "600",
-    border: "1px solid rgba(102, 126, 234, 0.3)",
-  },
-};
 
 export default Home;
