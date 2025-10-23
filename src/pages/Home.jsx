@@ -1,5 +1,7 @@
 import { ReactTyped } from "react-typed";
 import { Card } from "@mui/material";
+import epitechLogo from "../assets/EPILOGO.png";
+
 function Home() {
   return (
     <>
@@ -31,34 +33,83 @@ function Home() {
 
           <div className="card-container">
             <Card
+              className="pixel-card"
               style={{
-                maxWidth: "400px",
-                padding: "30px",
+                maxWidth: "700px",
+                padding: "50px",
                 backgroundColor: "#1c2128",
                 color: "white",
-                borderRadius: "12px",
-                border: "1px solid transparent",
-                backgroundImage:
-                  "linear-gradient(#1c2128, #1c2128), linear-gradient(135deg, #667eea, #764ba2)",
-                backgroundOrigin: "border-box",
-                backgroundClip: "padding-box, border-box",
-                boxShadow: "0 0 30px rgba(102, 126, 234, 0.3)",
+                border: "none",
+                position: "relative",
                 animation: "slideInLeft 0.8s ease-out 2s both",
               }}
             >
-              <h3
+              <div
                 style={{
-                  marginTop: 0,
-                  fontSize: "1.5rem",
-                  marginBottom: "15px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "30px",
+                  marginBottom: "30px",
                 }}
               >
-                À propos
-              </h3>
-              <p style={{ lineHeight: "1.6", fontSize: "1.5rem", margin: 0 }}>
+                <img
+                  src={epitechLogo}
+                  alt="EPITECH Logo"
+                  style={{
+                    width: "120px",
+                    height: "120px",
+                    objectFit: "contain",
+                    filter: "brightness(0) invert(1)",
+                  }}
+                />
+                <div>
+                  <h3
+                    style={{
+                      marginTop: 0,
+                      fontSize: "2rem",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    À propos
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "1.1rem",
+                      color: "#667eea",
+                      margin: 0,
+                      fontWeight: "600",
+                    }}
+                  >
+                    Étudiant à EPITECH Strasbourg
+                  </p>
+                </div>
+              </div>
+              <p
+                style={{
+                  lineHeight: "1.8",
+                  fontSize: "1.3rem",
+                  margin: 0,
+                  color: "#8892b0",
+                }}
+              >
                 Actuellement en Pré-MSc chez EPITECH Strasbourg, je suis depuis
                 longtemps passionné par le développement informatique.
               </p>
+              <div
+                style={{
+                  marginTop: "30px",
+                  display: "flex",
+                  gap: "15px",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }}
+              >
+                <span style={styles.tag}>React.js</span>
+                <span style={styles.tag}>PHP Laravel</span>
+                <span style={styles.tag}>React Native</span>
+                <span style={styles.tag}>Python</span>
+                <span style={styles.tag}>JavaScript</span>
+              </div>
             </Card>
           </div>
         </div>
@@ -133,8 +184,33 @@ function Home() {
   }
 }
 
+.pixel-card {
+  image-rendering: pixelated;
+  border-radius: 0 !important;
+  clip-path: polygon(
+    0 8px, 8px 8px, 8px 0,
+    calc(100% - 8px) 0, calc(100% - 8px) 8px, 100% 8px,
+    100% calc(100% - 8px), calc(100% - 8px) calc(100% - 8px), calc(100% - 8px) 100%,
+    8px 100%, 8px calc(100% - 8px), 0 calc(100% - 8px)
+  );
+  box-shadow: 
+    0 0 0 3px #667eea,
+    6px 0 0 3px #667eea,
+    -6px 0 0 3px #667eea,
+    0 6px 0 3px #667eea,
+    0 -6px 0 3px #667eea,
+    6px 6px 0 3px #764ba2,
+    -6px -6px 0 3px #764ba2,
+    6px -6px 0 3px #764ba2,
+    -6px 6px 0 3px #764ba2,
+    12px 12px 0 0 rgba(102, 126, 234, 0.3),
+    16px 16px 0 0 rgba(102, 126, 234, 0.2),
+    20px 20px 0 0 rgba(102, 126, 234, 0.1);
+}
+
 #main-content {
   animation: fadeIn 1s ease-in-out;
+  padding: 0 20px;
 }
 
 .header {
@@ -148,7 +224,8 @@ function Home() {
 .card-container {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 80px;
+  margin-bottom: 100px;
 }
 
 .section {
@@ -220,5 +297,17 @@ html {
     </>
   );
 }
+
+const styles = {
+  tag: {
+    padding: "8px 20px",
+    backgroundColor: "rgba(102, 126, 234, 0.2)",
+    color: "#667eea",
+    borderRadius: "20px",
+    fontSize: "0.95rem",
+    fontWeight: "600",
+    border: "1px solid rgba(102, 126, 234, 0.3)",
+  },
+};
 
 export default Home;
