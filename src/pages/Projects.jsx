@@ -48,7 +48,9 @@ function Projects() {
   return (
     <div style={styles.container}>
       <h1 style={styles.header}>Mes Projets</h1>
-      <p style={styles.subtitle}>Une sélection de projets web, mobile et IA</p>
+      <p style={styles.subtitle}>
+        Ensemble de mes projets réalisés (Web, Mobile, IA)
+      </p>
 
       <div style={styles.projectsGrid}>
         {projects.map((project, index) => (
@@ -108,11 +110,6 @@ const styles = {
     color: "white",
     fontSize: "3.5rem",
     textAlign: "center",
-    marginBottom: "20px",
-    background: "linear-gradient(135deg, #667eea, #764ba2)",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-    backgroundClip: "text",
   },
   subtitle: {
     color: "#8892b0",
