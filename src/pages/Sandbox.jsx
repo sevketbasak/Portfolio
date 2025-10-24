@@ -70,17 +70,13 @@ function Sandbox() {
             onClick={() => handleApiClick(api)}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-10px)";
-              e.currentTarget.style.backgroundImage =
-                "linear-gradient(#1c2128, #1c2128), linear-gradient(135deg, #667eea, #764ba2)";
               e.currentTarget.style.boxShadow =
-                "0 0 40px rgba(102, 126, 234, 0.4)";
+                "0 0 40px rgba(102, 126, 234, 0.2)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.backgroundImage =
-                "linear-gradient(#1c2128, #1c2128), linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3))";
               e.currentTarget.style.boxShadow =
-                "0 0 20px rgba(102, 126, 234, 0.2)";
+                "0 0 30px rgba(102, 126, 234, 0.2)";
             }}
           >
             <div style={styles.gameIcon}>
@@ -104,17 +100,13 @@ function Sandbox() {
             onClick={() => handleGameClick(game.title)}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-10px)";
-              e.currentTarget.style.backgroundImage =
-                "linear-gradient(#1c2128, #1c2128), linear-gradient(135deg, #667eea, #764ba2)";
               e.currentTarget.style.boxShadow =
-                "0 0 40px rgba(102, 126, 234, 0.4)";
+                "0 0 40px rgba(102, 126, 234, 0.2)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.backgroundImage =
-                "linear-gradient(#1c2128, #1c2128), linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3))";
               e.currentTarget.style.boxShadow =
-                "0 0 20px rgba(102, 126, 234, 0.2)";
+                "0 0 30px rgba(102, 126, 234, 0.2)";
             }}
           >
             <div style={styles.gameIcon}>
@@ -166,16 +158,16 @@ const styles = {
     color: "white",
     padding: "40px 30px",
     borderRadius: "12px",
-    border: "1px solid #30363d",
+    border: "1px solid transparent",
     marginBottom: "40px",
     cursor: "pointer",
     transition: "all 0.3s ease",
     textAlign: "center",
     backgroundImage:
-      "linear-gradient(#1c2128, #1c2128), linear-gradient(135deg, rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3))",
+      "linear-gradient(#1c2128, #1c2128), linear-gradient(135deg, #667eea, #764ba2)",
     backgroundOrigin: "border-box",
     backgroundClip: "padding-box, border-box",
-    boxShadow: "0 0 20px rgba(102, 126, 234, 0.2)",
+    boxShadow: "0 0 30px rgba(102, 126, 234, 0.2)",
   },
   gameIcon: {
     fontSize: "3rem",
