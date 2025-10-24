@@ -34,8 +34,8 @@ function Home() {
           <div className="card-container">
             <Card
               style={{
-                maxWidth: "700px",
-                padding: "50px",
+                maxWidth: "900px",
+                padding: "60px",
                 backgroundColor: "#1c2128",
                 color: "white",
                 borderRadius: "12px",
@@ -88,16 +88,14 @@ function Home() {
                   </p>
                 </div>
               </div>
-              <p
-                style={{
-                  lineHeight: "1.8",
-                  fontSize: "1.3rem",
-                  margin: 0,
-                  color: "#8892b0",
-                }}
-              >
+              <p style={styles.desc}>
                 Actuellement en Pré-MSc chez EPITECH Strasbourg, je suis depuis
                 longtemps passionné par le développement informatique.
+              </p>
+              <p style={styles.desc}>
+                Passionné par l'intelligence artificielle, je vise une
+                spéacialisation dans le domaine à partir de ma deuxième année de
+                MSc.
               </p>
               <div
                 style={{
@@ -110,9 +108,9 @@ function Home() {
               >
                 <span style={styles.tag}>React.js</span>
                 <span style={styles.tag}>PHP Laravel</span>
-                <span style={styles.tag}>React Native</span>
+                <span style={styles.tag}>Java</span>
+                <span style={styles.tag}>C#</span>
                 <span style={styles.tag}>Python</span>
-                <span style={styles.tag}>JavaScript</span>
               </div>
             </Card>
           </div>
@@ -287,6 +285,14 @@ const styles = {
     fontSize: "0.95rem",
     fontWeight: "600",
     border: "1px solid rgba(102, 126, 234, 0.3)",
+  },
+
+  desc: {
+    lineHeight: "1.8",
+    fontSize: "1.3rem",
+    margin: 0,
+    color: "#8892b0",
+    marginTop: "15px",
   },
 };
 
