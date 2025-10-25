@@ -1,6 +1,7 @@
 import { ReactTyped } from "react-typed";
 import { Card } from "@mui/material";
 import epitechLogo from "../assets/EPILOGO.png";
+import cvPdf from "../assets/BASAK_Sevket_CV6.pdf";
 
 function Home() {
   return (
@@ -111,6 +112,26 @@ function Home() {
                 <span style={styles.tag}>Java</span>
                 <span style={styles.tag}>C#</span>
                 <span style={styles.tag}>Python</span>
+              </div>
+
+              <div style={{ marginTop: "30px", textAlign: "center" }}>
+                <a
+                  href={cvPdf}
+                  download="BASAK_Sevket_CV.pdf"
+                  style={styles.cvButton}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-3px)";
+                    e.currentTarget.style.boxShadow =
+                      "0 5px 15px rgba(102, 126, 234, 0.5)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow =
+                      "0 3px 15px rgba(102, 126, 234, 0.3)";
+                  }}
+                >
+                  Télécharger mon CV
+                </a>
               </div>
             </Card>
           </div>
@@ -293,6 +314,22 @@ const styles = {
     margin: 0,
     color: "#8892b0",
     marginTop: "15px",
+  },
+
+  cvButton: {
+    display: "inline-block",
+    padding: "15px 40px",
+    backgroundColor: "transparent",
+    color: "white",
+    textDecoration: "none",
+    borderRadius: "12px",
+    border: "2px solid #667eea",
+    fontSize: "1.1rem",
+    fontWeight: "600",
+    transition: "all 0.3s ease",
+    marginTop: "20px",
+    boxShadow: "0 3px 15px rgba(102, 126, 234, 0.3)",
+    cursor: "pointer",
   },
 };
 
