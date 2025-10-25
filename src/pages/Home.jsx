@@ -1,5 +1,6 @@
 import { ReactTyped } from "react-typed";
 import { Card } from "@mui/material";
+import { Link } from "react-router-dom";
 import epitechLogo from "../assets/EPILOGO.png";
 import cvPdf from "../assets/BASAK_Sevket_CV6.pdf";
 
@@ -13,7 +14,7 @@ function Home() {
               strings={["Sevket BASAK"]}
               typeSpeed={50}
               showCursor={false}
-              style={{ fontSize: "60px" }}
+              className="main-title"
             />
             <br />
             <ReactTyped
@@ -28,72 +29,37 @@ function Home() {
               startDelay={1000}
               showCursor={true}
               loop={true}
-              style={{ fontSize: "40px" }}
+              className="subtitle"
             />
           </div>
 
           <div className="card-container">
-            <Card
-              style={{
-                maxWidth: "900px",
-                padding: "60px",
-                backgroundColor: "#1c2128",
-                color: "white",
-                borderRadius: "12px",
-                border: "1px solid transparent",
-                backgroundImage:
-                  "linear-gradient(#1c2128, #1c2128), linear-gradient(135deg, #667eea, #764ba2)",
-                backgroundOrigin: "border-box",
-                backgroundClip: "padding-box, border-box",
-                boxShadow: "0 0 30px rgba(102, 126, 234, 0.3)",
-                animation: "slideInLeft 0.8s ease-out 2s both",
-              }}
-            >
+            <Card className="about-card">
               <div
                 style={{
                   display: "flex",
                   alignItems: "center",
                   gap: "30px",
                   marginBottom: "30px",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
                 }}
               >
                 <img
                   src={epitechLogo}
                   alt="EPITECH Logo"
-                  style={{
-                    width: "120px",
-                    height: "120px",
-                    objectFit: "contain",
-                    filter: "brightness(0) invert(1)",
-                  }}
+                  className="logo-img"
                 />
                 <div>
-                  <h3
-                    style={{
-                      marginTop: 0,
-                      fontSize: "2rem",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    À propos
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "1.1rem",
-                      color: "#667eea",
-                      margin: 0,
-                      fontWeight: "600",
-                    }}
-                  >
-                    Étudiant à EPITECH Strasbourg
-                  </p>
+                  <h3 className="card-title">À propos</h3>
+                  <p className="card-subtitle">Étudiant à EPITECH Strasbourg</p>
                 </div>
               </div>
-              <p style={styles.desc}>
+              <p className="desc-text">
                 Actuellement en Pré-MSc chez EPITECH Strasbourg, je suis depuis
                 longtemps passionné par le développement informatique.
               </p>
-              <p style={styles.desc}>
+              <p className="desc-text">
                 Passionné par l'intelligence artificielle, je vise une
                 spéacialisation dans le domaine à partir de ma deuxième année de
                 MSc.
@@ -107,18 +73,18 @@ function Home() {
                   justifyContent: "center",
                 }}
               >
-                <span style={styles.tag}>React.js</span>
-                <span style={styles.tag}>PHP Laravel</span>
-                <span style={styles.tag}>Java</span>
-                <span style={styles.tag}>C#</span>
-                <span style={styles.tag}>Python</span>
+                <span className="tag-item">React.js</span>
+                <span className="tag-item">PHP Laravel</span>
+                <span className="tag-item">Java</span>
+                <span className="tag-item">C#</span>
+                <span className="tag-item">Python</span>
               </div>
 
               <div style={{ marginTop: "30px", textAlign: "center" }}>
                 <a
                   href={cvPdf}
                   download="BASAK_Sevket_CV.pdf"
-                  style={styles.cvButton}
+                  className="cv-button"
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = "translateY(-3px)";
                     e.currentTarget.style.boxShadow =
@@ -185,6 +151,25 @@ function Home() {
               </p>
             </Card>
           </div>
+
+          <div style={{ textAlign: "center", marginTop: "40px" }}>
+            <Link
+              to="/projects"
+              className="more-button"
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-3px)";
+                e.currentTarget.style.boxShadow =
+                  "0 5px 20px rgba(102, 126, 234, 0.5)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow =
+                  "0 3px 15px rgba(102, 126, 234, 0.3)";
+              }}
+            >
+              En savoir plus →
+            </Link>
+          </div>
         </div>
       </section>
       <style>{`@keyframes fadeIn {
@@ -220,11 +205,42 @@ function Home() {
   font-size: 3rem;
 }
 
+.main-title {
+  font-size: 60px;
+}
+
+.subtitle {
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-top: 30px;
+    font-size: 2rem;
+  }
+  
+  .main-title {
+    font-size: 40px;
+  }
+  
+  .subtitle {
+    font-size: 28px;
+  }
+}
+
 .card-container {
   display: flex;
   justify-content: center;
   margin-top: 80px;
   margin-bottom: 100px;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
 }
 
 .section {
@@ -233,7 +249,15 @@ function Home() {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 50px 20px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-top: 100px;
+    padding: 30px 15px;
+    min-height: auto;
+  }
 }
 
 .section-content {
@@ -248,6 +272,13 @@ function Home() {
   margin-bottom: 50px;
 }
 
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -257,10 +288,12 @@ html {
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
+  padding: 0 15px;
 }
 
 .project-card {
   max-width: 350px;
+  width: 100%;
   padding: 30px;
   background-color: #1c2128;
   color: white;
@@ -274,6 +307,13 @@ html {
   transition: all 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .project-card {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 40px rgba(102, 126, 234, 0.2);
@@ -281,8 +321,14 @@ html {
 
 .project-title {
   margin: 0 0 15px 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 1.3rem;
+  }
 }
 
 .project-description {
@@ -292,45 +338,130 @@ html {
   text-align: center;
   color: #8892b0;
 }
+
+@media (max-width: 768px) {
+  .project-description {
+    font-size: 1rem;
+  }
+}
+
+.about-card {
+  max-width: 900px;
+  width: 100%;
+  padding: 60px;
+  background-color: #1c2128;
+  color: white;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#1c2128, #1c2128), linear-gradient(135deg, #667eea, #764ba2);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+  animation: slideInLeft 0.8s ease-out 2s both;
+}
+
+@media (max-width: 768px) {
+  .about-card {
+    padding: 30px 20px !important;
+  }
+}
+
+.logo-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+}
+
+.card-title {
+  margin-top: 0;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.5rem !important;
+  }
+}
+
+.card-subtitle {
+  font-size: 1.1rem;
+  color: #667eea;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .card-subtitle {
+    font-size: 0.95rem !important;
+  }
+}
+
+.desc-text {
+  line-height: 1.8;
+  font-size: 1.3rem;
+  margin: 0;
+  color: #8892b0;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .desc-text {
+    font-size: 1rem;
+  }
+}
+
+.tag-item {
+  padding: 8px 20px;
+  background-color: rgba(102, 126, 234, 0.2);
+  color: #667eea;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 768px) {
+  .tag-item {
+    padding: 6px 15px;
+    font-size: 0.85rem;
+  }
+}
+
+.cv-button, .more-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  border: 2px solid #667eea;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 15px rgba(102, 126, 234, 0.3);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .cv-button, .more-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
 `}</style>
     </>
   );
 }
-
-const styles = {
-  tag: {
-    padding: "8px 20px",
-    backgroundColor: "rgba(102, 126, 234, 0.2)",
-    color: "#667eea",
-    borderRadius: "20px",
-    fontSize: "0.95rem",
-    fontWeight: "600",
-    border: "1px solid rgba(102, 126, 234, 0.3)",
-  },
-
-  desc: {
-    lineHeight: "1.8",
-    fontSize: "1.3rem",
-    margin: 0,
-    color: "#8892b0",
-    marginTop: "15px",
-  },
-
-  cvButton: {
-    display: "inline-block",
-    padding: "15px 40px",
-    backgroundColor: "transparent",
-    color: "white",
-    textDecoration: "none",
-    borderRadius: "12px",
-    border: "2px solid #667eea",
-    fontSize: "1.1rem",
-    fontWeight: "600",
-    transition: "all 0.3s ease",
-    marginTop: "20px",
-    boxShadow: "0 3px 15px rgba(102, 126, 234, 0.3)",
-    cursor: "pointer",
-  },
-};
 
 export default Home;
