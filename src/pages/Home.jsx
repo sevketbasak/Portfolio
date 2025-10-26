@@ -631,7 +631,7 @@ html {
 
 .skills-swiper .swiper-button-next::after,
 .skills-swiper .swiper-button-prev::after {
-  font-size: 20px;
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -668,7 +668,7 @@ html {
   
   .skills-swiper .swiper-button-next::after,
   .skills-swiper .swiper-button-prev::after {
-    font-size: 16px;
+    font-size: 10px;
   }
 }
 
