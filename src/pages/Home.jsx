@@ -1,7 +1,17 @@
 import { ReactTyped } from "react-typed";
 import { Card } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import cvPdf from "../assets/BASAK_Sevket_CV6.pdf";
+import sqlIcon from "../assets/sql.svg";
+import webIcon from "../assets/web.svg";
+import videogameIcon from "../assets/videogame.svg";
+import phoneIcon from "../assets/phone.svg";
+import pixelIcon from "../assets/pixel.svg";
 
 function Home() {
   return (
@@ -95,6 +105,126 @@ function Home() {
               </div>
             </Card>
           </div>
+        </div>
+      </section>
+
+      <section id="skills" className="section skills-section">
+        <div className="section-content">
+          <h2 className="section-title">Compétences</h2>
+
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            breakpoints={{
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+            }}
+            className="skills-swiper"
+          >
+            <SwiperSlide>
+              <Card className="skill-card">
+                <div className="skill-icon">
+                  <img src={sqlIcon} alt="SQL" className="skill-icon-img" />
+                </div>
+                <h3 className="skill-title">Conception de bases de données</h3>
+                <p className="skill-description">
+                  Conception et optimisation de bases de données pour
+                  applications web et logiciels
+                </p>
+                <div className="skill-tags">
+                  <span className="skill-tag">MySQL</span>
+                </div>
+              </Card>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Card className="skill-card">
+                <div className="skill-icon">
+                  <img src={webIcon} alt="Web" className="skill-icon-img" />
+                </div>
+                <h3 className="skill-title">Développement Web Full-Stack</h3>
+                <p className="skill-description">
+                  Conception complète de sites web, du front-end au back-end
+                </p>
+                <div className="skill-tags">
+                  <span className="skill-tag">React.js</span>
+                  <span className="skill-tag">PHP Laravel</span>
+                </div>
+              </Card>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Card className="skill-card">
+                <div className="skill-icon">
+                  <img
+                    src={videogameIcon}
+                    alt="Game"
+                    className="skill-icon-img"
+                  />
+                </div>
+                <h3 className="skill-title">Développement de jeux</h3>
+                <p className="skill-description">
+                  Création de jeux vidéo et applications interactives
+                </p>
+                <div className="skill-tags">
+                  <span className="skill-tag">Unity</span>
+                  <span className="skill-tag">C#</span>
+                </div>
+              </Card>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Card className="skill-card">
+                <div className="skill-icon">
+                  <img
+                    src={phoneIcon}
+                    alt="Mobile"
+                    className="skill-icon-img"
+                  />
+                </div>
+                <h3 className="skill-title">Développement Mobile</h3>
+                <p className="skill-description">
+                  Création d'applications mobiles natives et cross-platform
+                </p>
+                <div className="skill-tags">
+                  <span className="skill-tag">React Native</span>
+                  <span className="skill-tag">Android</span>
+                  <span className="skill-tag">iOS</span>
+                </div>
+              </Card>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Card className="skill-card">
+                <div className="skill-icon">
+                  <img
+                    src={pixelIcon}
+                    alt="Pixel Art"
+                    className="skill-icon-img"
+                  />
+                </div>
+                <h3 className="skill-title">Design & Pixel Art</h3>
+                <p className="skill-description">
+                  Création de designs modernes et pixel art pour interfaces et
+                  jeux
+                </p>
+                <div className="skill-tags">
+                  <span className="skill-tag">UI/UX</span>
+                  <span className="skill-tag">Pixel Art</span>
+                  <span className="skill-tag">Aseprite</span>
+                </div>
+              </Card>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
 
@@ -451,6 +581,238 @@ html {
   .cv-button, .more-button {
     padding: 12px 30px;
     font-size: 1rem;
+  }
+}
+
+.skills-section {
+  margin-top: 150px;
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    margin-top: 80px;
+  }
+}
+
+.skills-swiper {
+  width: 100%;
+  padding: 40px 60px 60px 60px;
+}
+
+.skills-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.skills-swiper .swiper-button-next,
+.skills-swiper .swiper-button-prev {
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.skills-swiper .swiper-button-next {
+  right: 0;
+}
+
+.skills-swiper .swiper-button-prev {
+  left: 0;
+}
+
+.skills-swiper .swiper-button-next:hover,
+.skills-swiper .swiper-button-prev:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: scale(1.1);
+}
+
+.skills-swiper .swiper-button-next::after,
+.skills-swiper .swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.skills-swiper .swiper-pagination-bullet {
+  background: #667eea;
+  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+}
+
+.skills-swiper .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #667eea;
+}
+
+@media (max-width: 768px) {
+  .skills-swiper {
+    padding: 30px 50px 50px 50px;
+  }
+  
+  .skills-swiper .swiper-button-next,
+  .skills-swiper .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .skills-swiper .swiper-button-next {
+    right: 5px;
+  }
+  
+  .skills-swiper .swiper-button-prev {
+    left: 5px;
+  }
+  
+  .skills-swiper .swiper-button-next::after,
+  .skills-swiper .swiper-button-prev::after {
+    font-size: 16px;
+  }
+}
+
+.skill-card {
+  padding: 35px;
+  background-color: #1c2128;
+  color: white;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#1c2128, #1c2128),
+    linear-gradient(135deg, #667eea, #764ba2);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 0 30px rgba(102, 126, 234, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  min-height: 350px;
+}
+
+@media (max-width: 768px) {
+  .skill-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .skill-card {
+    padding: 20px;
+  }
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(102, 126, 234, 0.2);
+}
+
+.skill-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  filter: grayscale(0.2);
+}
+
+.skill-icon-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .skill-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  
+  .skill-icon-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+  
+  .skill-icon-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.skill-title {
+  margin: 0 0 15px 0;
+  font-size: 1.5rem;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .skill-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .skill-title {
+    font-size: 1.2rem;
+  }
+}
+
+.skill-description {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #8892b0;
+}
+
+@media (max-width: 768px) {
+  .skill-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .skill-description {
+    font-size: 0.95rem;
+  }
+}
+
+.skill-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.skill-tag {
+  padding: 6px 15px;
+  background-color: rgba(102, 126, 234, 0.15);
+  color: #667eea;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 768px) {
+  .skill-tag {
+    padding: 5px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .skill-tag {
+    padding: 4px 10px;
+    font-size: 0.8rem;
   }
 }
 `}</style>
