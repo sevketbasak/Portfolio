@@ -95,7 +95,7 @@ function Sandbox() {
           </button>
         ))}
       </div>
-      <h1 style={styles.header}>Jeux</h1>
+      <h1 style={styles.header}>Jeux (WIP)</h1>
       <p style={styles.subtitle}>
         Collection de mini-jeux et projets interactifs
       </p>
