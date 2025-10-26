@@ -59,7 +59,7 @@ function Sandbox() {
   };
 
   return (
-    <div style={styles.container}>
+    <div style={styles.container} className="sandbox-page">
       <h1 style={styles.header}>APIs</h1>
       <p style={styles.subtitle}>Intégration d'APIs dans le portfolio</p>
       <div style={styles.gamesGrid}>
@@ -67,6 +67,7 @@ function Sandbox() {
           <button
             key={api.id}
             style={styles.gameCard}
+            className="game-card"
             onClick={() => handleApiClick(api)}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-10px)";
@@ -80,10 +81,17 @@ function Sandbox() {
             }}
           >
             <div style={styles.gameIcon}>
-              <img src={api.icon} alt={api.title} style={styles.iconImage} />
+              <img
+                src={api.icon}
+                alt={api.title}
+                style={styles.iconImage}
+                className="icon-image"
+              />
             </div>
             <h3 style={styles.gameTitle}>{api.title}</h3>
-            <p style={styles.gameDescription}>{api.description}</p>
+            <p style={styles.gameDescription} className="game-description">
+              {api.description}
+            </p>
           </button>
         ))}
       </div>
@@ -97,6 +105,7 @@ function Sandbox() {
           <button
             key={game.id}
             style={styles.gameCard}
+            className="game-card"
             onClick={() => handleGameClick(game.title)}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-10px)";
@@ -110,10 +119,17 @@ function Sandbox() {
             }}
           >
             <div style={styles.gameIcon}>
-              <img src={game.icon} alt={game.title} style={styles.iconImage} />
+              <img
+                src={game.icon}
+                alt={game.title}
+                style={styles.iconImage}
+                className="icon-image"
+              />
             </div>
             <h3 style={styles.gameTitle}>{game.title}</h3>
-            <p style={styles.gameDescription}>{game.description}</p>
+            <p style={styles.gameDescription} className="game-description">
+              {game.description}
+            </p>
           </button>
         ))}
       </div>
@@ -122,6 +138,50 @@ function Sandbox() {
         @keyframes fadeIn {
           from { opacity: 0; }
           to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+          .sandbox-page h1 {
+            font-size: 2.5rem !important;
+            margin-bottom: 15px !important;
+          }
+          
+          .sandbox-page p {
+            font-size: 1.1rem !important;
+            margin-bottom: 40px !important;
+          }
+          
+          .sandbox-page .game-card {
+            padding: 30px 20px !important;
+            margin-bottom: 30px !important;
+          }
+          
+          .sandbox-page h3 {
+            font-size: 1.5rem !important;
+          }
+          
+          .sandbox-page .game-description {
+            font-size: 1rem !important;
+          }
+          
+          .sandbox-page .icon-image {
+            width: 60px !important;
+            height: 60px !important;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .sandbox-page h1 {
+            font-size: 2rem !important;
+          }
+          
+          .sandbox-page .game-card {
+            padding: 25px 15px !important;
+          }
+          
+          .sandbox-page h3 {
+            font-size: 1.3rem !important;
+          }
         }
       `}</style>
     </div>

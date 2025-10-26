@@ -1,7 +1,6 @@
 import { ReactTyped } from "react-typed";
 import { Card } from "@mui/material";
 import { Link } from "react-router-dom";
-import epitechLogo from "../assets/EPILOGO.png";
 import cvPdf from "../assets/BASAK_Sevket_CV6.pdf";
 
 function Home() {
@@ -45,11 +44,6 @@ function Home() {
                   justifyContent: "center",
                 }}
               >
-                <img
-                  src={epitechLogo}
-                  alt="EPITECH Logo"
-                  className="logo-img"
-                />
                 <div>
                   <h3 className="card-title">À propos</h3>
                   <p className="card-subtitle">Étudiant à EPITECH Strasbourg</p>
@@ -167,7 +161,7 @@ function Home() {
                   "0 3px 15px rgba(102, 126, 234, 0.3)";
               }}
             >
-              En savoir plus →
+              En savoir plus
             </Link>
           </div>
         </div>

@@ -137,6 +137,62 @@ function Footer() {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 2rem;
+  }
+  .footer-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  .contact-links {
+    gap: 1.5rem;
+    margin-bottom: 40px;
+  }
+  .contact-link {
+    padding: 18px 25px;
+    font-size: 1rem;
+    min-width: 130px;
+  }
+  .svg-icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    padding: 15px 15px 25px 15px;
+  }
+  .footer-title {
+    font-size: 1.7rem;
+  }
+  .footer-subtitle {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 30px;
+  }
+  .contact-link {
+    padding: 15px 20px;
+    font-size: 0.95rem;
+    min-width: 120px;
+    width: 100%;
+    max-width: 200px;
+  }
+  .svg-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .footer-bottom {
+    font-size: 0.85rem;
+  }
 }`}</style>
     </>
   );

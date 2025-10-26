@@ -5,7 +5,7 @@ function NasaSection() {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const API_KEY = "hRfqhUE8JY0fPY3XBnqrseonMtLBmpox4rriqbTl";
+  const API_KEY = import.meta.env.VITE_NASA_API_KEY;
   const API_URL = `https://api.nasa.gov/planetary/apod?count=1&api_key=${API_KEY}`;
   const CACHE_KEY = "nasa_apod_cache";
   const CACHE_DURATION = 24 * 60 * 60 * 1000;
@@ -50,13 +50,69 @@ function NasaSection() {
   if (isLoading) return <p style={styles.loading}>Chargement...</p>;
 
   return (
-    <section style={styles.section}>
-      <h2 style={styles.title}>Astronomy Picture of the Day</h2>
-      <img src={data.url} alt={data.title} style={styles.image} />
-      <h3 style={styles.subtitle}>{data.title}</h3>
-      <p style={styles.explanation}>{data.explanation}</p>
-      <p style={styles.date}>Date : {data.date}</p>
-    </section>
+    <>
+      <style>
+        {`
+          @media (max-width: 768px) {
+            .nasa-section h2 {
+              font-size: 2rem !important;
+            }
+            .nasa-section {
+              padding: 30px 20px !important;
+            }
+            .apod-subtitle {
+              font-size: 1.5rem !important;
+            }
+            .apod-explanation {
+              font-size: 1rem !important;
+              text-align: left !important;
+            }
+            .apod-date {
+              font-size: 0.9rem !important;
+              margin-top: 1.5rem !important;
+            }
+          }
+
+          @media (max-width: 400px) {
+            .nasa-section h2 {
+              font-size: 1.7rem !important;
+            }
+            .nasa-section {
+              padding: 25px 15px !important;
+            }
+            .apod-subtitle {
+              font-size: 1.3rem !important;
+              margin-top: 1rem !important;
+            }
+            .apod-explanation {
+              font-size: 0.95rem !important;
+              line-height: 1.5 !important;
+            }
+            .apod-date {
+              font-size: 0.85rem !important;
+            }
+          }
+        `}
+      </style>
+      <section style={styles.section} className="nasa-section">
+        <h2 style={styles.title}>Astronomy Picture of the Day</h2>
+        <img
+          src={data.url}
+          alt={data.title}
+          style={styles.image}
+          className="apod-image"
+        />
+        <h3 style={styles.subtitle} className="apod-subtitle">
+          {data.title}
+        </h3>
+        <p style={styles.explanation} className="apod-explanation">
+          {data.explanation}
+        </p>
+        <p style={styles.date} className="apod-date">
+          Date : {data.date}
+        </p>
+      </section>
+    </>
   );
 }
 

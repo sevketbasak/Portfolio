@@ -46,15 +46,15 @@ function Projects() {
   ];
 
   return (
-    <div style={styles.container}>
+    <div style={styles.container} className="projects-page">
       <h1 style={styles.header}>Mes Projets</h1>
-      <p style={styles.subtitle}>
+      <p style={styles.subtitle} className="subtitle">
         Ensemble de mes projets réalisés (Web, Mobile, IA)
       </p>
 
       <div style={styles.projectsGrid}>
         {projects.map((project, index) => (
-          <div key={index} style={styles.projectCard}>
+          <div key={index} style={styles.projectCard} className="project-card">
             {project.image && (
               <div style={styles.imageContainer}>
                 <img
@@ -65,12 +65,12 @@ function Projects() {
               </div>
             )}
 
-            <div style={styles.cardContent}>
+            <div style={styles.cardContent} className="card-content">
               <h2 style={styles.projectTitle}>{project.title}</h2>
 
               <div style={styles.tagsContainer}>
                 {project.tags.map((tag, i) => (
-                  <span key={i} style={styles.tag}>
+                  <span key={i} style={styles.tag} className="tag">
                     {tag}
                   </span>
                 ))}
@@ -95,6 +95,59 @@ function Projects() {
         @keyframes fadeIn {
           from { opacity: 0; }
           to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+          .projects-page h1 {
+            font-size: 2.5rem !important;
+          }
+          
+          .projects-page .subtitle {
+            font-size: 1.1rem !important;
+          }
+          
+          .projects-page .project-card {
+            margin-bottom: 30px;
+          }
+          
+          .projects-page .card-content {
+            padding: 25px !important;
+          }
+          
+          .projects-page h2 {
+            font-size: 2rem !important;
+          }
+          
+          .projects-page h3 {
+            font-size: 1.2rem !important;
+          }
+          
+          .projects-page p {
+            font-size: 1rem !important;
+          }
+          
+          .projects-page .tag {
+            padding: 6px 15px !important;
+            font-size: 0.85rem !important;
+          }
+          
+          .projects-page ul li {
+            font-size: 0.95rem !important;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .projects-page h1 {
+            font-size: 2rem !important;
+          }
+          
+          .projects-page .card-content {
+            padding: 20px !important;
+          }
+          
+          .projects-page h2 {
+            font-size: 1.7rem !important;
+          }
         }
       `}</style>
     </div>
