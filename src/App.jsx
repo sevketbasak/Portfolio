@@ -9,7 +9,7 @@ import WeatherSection from "./pages/WeatherSection";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Portfolio">
       <div
         style={{
           minHeight: "100vh",
@@ -25,10 +25,10 @@ function App() {
             <Route path="/sandbox" element={<Sandbox />} />
             <Route path="/sandbox/nasa" element={<NasaSection />} />
             <Route path="/sandbox/weather" element={<WeatherSection />} />
-
             <Route path="/" element={<Home />} />
           </Routes>
         </div>
+
         <Footer />
       </div>
     </Router>
